@@ -1,0 +1,126 @@
+.container {
+    max-width: 425px;
+    min-width: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 12px 15px 10px var(--color-black-24),
+    10px 17px 50px 10px var(--color-black-18);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil-html {
+    width: 100%;
+    background: var(--color-blue-dark-30);
+}
+
+.perfil-html .view-image-perfil {
+    margin: 20px 0;
+    margin-bottom: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.perfil-html .view-image-perfil img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+}
+
+.perfil-html .view-image-perfil span {
+    font-style: italic;
+    font-size: 1.0em;
+    margin-top: 10px;
+    padding: 2px 35px;
+    cursor: pointer;
+    border: 1px solid var(--color-white);
+    border-radius: 10px;
+}
+
+.perfil-html .view-image-perfil span:hover {
+    font-weight: bold;
+}
+
+
+.perfil-html .fields {
+
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.perfil-html .buttons {
+
+    width: 100%;
+    height: 18vh;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.perfil-html .group .label,
+.perfil-html .group .button {
+    text-transform: uppercase;
+}
+
+.perfil-html .group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.perfil-html .group .label,
+.perfil-html .group .input {
+    width: 100%;
+    display: block;
+    color: var(--color-white);
+}
+
+.perfil-html .group .input {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background: var(--color-white-20);
+    height: 40px;
+    font-size: 1.3em;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+.perfil-html .group .label {
+    font-size: 1.2em;
+    position: absolute;
+    top: 1.8rem;
+    right: -1rem;
+    transition: 0.25s ease;
+    z-index: 0;
+}
+
+.input:focus+.label,
+.input:valid+.label {
+    transform: translateY(-2.2rem);
+    color: var(--bs-primary);
+}
+
+/* .input:valid+.label {
+    color: var(--bs-success);
+} */
+
+.perfil-html{
+    min-width: 100%;
+    padding: 20px 15px;
+    padding-top: 0px;
+}

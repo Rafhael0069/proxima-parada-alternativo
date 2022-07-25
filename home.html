@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de compartlhamento de caronas">
+    <title>Próxima Parada</title>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style-menu.css">
+    <link rel="stylesheet" type="text/css" href="css/style-card-view.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-dark bg-primary shadow">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <span class="navbar-brand mb-0 h1">Proxíma Parada</span>
+
+            <div class="btn-group user-image">
+                <img class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false" src="img/use-perfil.jpg">
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><button class="dropdown-item" type="button"
+                            onclick="javascript:location.href='perfil.html'">Perfli</button></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><button class="dropdown-item" type="button"
+                            onclick="javascript:location.href='index.html'">Sair</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade come-from-modal left" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="btn-group-vertical" role="group" aria-label="Button group with nested dropdown">
+                        <button type="button" class="btn btn-primary active">Inicio</button>
+                        <button type="button" class="btn btn-primary"
+                            onclick="javascript:location.href='perfil.html'">Perfil</button>
+                        <button type="button" class="btn btn-primary"
+                            onclick="javascript:location.href='caronas.html'">Caronas</button>
+                        <button type="button" class="btn btn-primary">Filtros</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <div class="card">
+            <div class="card-header">
+                <p><span>Silva Rogerio</span> - <span>Professor</span></p>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <h3>Origen</h3>
+                    <p>Bairro: <span>Centro</span></p>
+                    <p>Rua: <span>Rua jubelino fonsseca</span> n°: <span>21</span></p>
+                    <p><span>21/07/2022</span> - <span>07:00</span></p>
+                </div>
+                <div class="card-text">
+                    <h3>Destino</h3>
+                    <p>Bairro: <span>Pantanal</span></p>
+                    <p>Rua: <span>Carlos Batista</span> n°: <span>234</span></p>
+                </div>
+                <div class="card-text">
+                    <p>Veículo: <span>Carro</span></p>
+                </div>
+            </div>
+            <div class="card-body">
+                <button class="card-button btn-primary">Conversar com o proprietário</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <p><span>Silva Rogerio</span> - <span>Professor</span></p>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <h3>Origen</h3>
+                    <p>Bairro: <span>Centro</span></p>
+                    <p>Rua: <span>Rua jubelino fonsseca</span> n°: <span>21</span></p>
+                    <p><span>21/07/2022</span> - <span>07:00</span></p>
+                </div>
+                <div class="card-text">
+                    <h3>Destino</h3>
+                    <p>Bairro: <span>Pantanal</span></p>
+                    <p>Rua: <span>Carlos Batista</span> n°: <span>234</span></p>
+                </div>
+                <div class="card-text">
+                    <p>Veículo: <span>Carro</span></p>
+                </div>
+            </div>
+            <div class="card-body">
+                <button class="card-button btn-primary">Conversar com o proprietário</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <p><span>Silva Rogerio</span> - <span>Professor</span></p>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <h3>Origen</h3>
+                    <p>Bairro: <span>Centro</span></p>
+                    <p>Rua: <span>Rua jubelino fonsseca</span> n°: <span>21</span></p>
+                    <p><span>21/07/2022</span> - <span>07:00</span></p>
+                </div>
+                <div class="card-text">
+                    <h3>Destino</h3>
+                    <p>Bairro: <span>Pantanal</span></p>
+                    <p>Rua: <span>Carlos Batista</span> n°: <span>234</span></p>
+                </div>
+                <div class="card-text">
+                    <p>Veículo: <span>Carro</span></p>
+                </div>
+            </div>
+            <div class="card-body">
+                <button class="card-button btn-primary">Conversar com o proprietário</button>
+            </div>
+        </div>
+
+
+    </main>
+
+</body>
+
+<script src="bootstrap/js/bootstrap.js"></script>
+
+</html>

@@ -1,0 +1,83 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--color-white: #ffffff;
+	--color-white-20: #ffffff33;
+	--color-black: #000000;
+	--color-black-24: #0000003d;
+	--color-black-25: #00000040;
+	--color-black-18: #0000002e;
+	--color-blue-dark-30: rgba(0, 65, 177, 0.30);
+	--color-blue-dark-20: #28396533;
+}
+
+body {
+	color: var(--color-white);
+	background: var(--color-background);
+	background-image: url(../img/abstract-city-30.jpeg);
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	background-size: 1370px 100%;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* *,
+:after,
+:before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+} */
+
+.clearfix:after,
+.clearfix:before {
+	content: '';
+	display: table
+}
+
+.clearfix:after {
+	clear: both;
+	display: block
+}
+
+.container {
+	width: 100%;
+	margin-top: 8vh;
+	padding: 0;
+	max-width: 1460px;
+}
+
+.btn {
+	width: 100%;
+	font-size: 1.3em;
+	border: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+.rodape {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	padding: 5px 5%;
+}
+
+@media (max-width: 400px) {
+	.container {
+		margin-top: 6vh;
+	}
+}
