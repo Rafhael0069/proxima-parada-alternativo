@@ -49,8 +49,16 @@ body {
     display: flex;
 }
 
+.login-form .page {
+    min-width: 100%;
+    height: 100%;
+    padding: 20px 15px;
+    padding-top: 0px;
+}
+
 .page .fields {
     width: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,6 +66,7 @@ body {
 
 .page .buttons {
     width: 100%;
+    height: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,12 +123,6 @@ body {
     color: var(--bs-success);
 } */
 
-.login-form .page {
-    min-width: 100%;
-    padding: 20px 15px;
-    padding-top: 0px;
-}
-
 input[type=radio] {
     display: none;
 }
@@ -151,12 +154,6 @@ input[type=radio]:nth-of-type(2):checked~.login-form {
     transform: translateX(-100%);
 }
 
-/* input[type=radio]:nth-of-type(2):checked~.login-form .page:nth-of-type(2) .input {
-    opacity: 1;
-    transform: translateX(0%);
-    transition: all 0.5s;
-}
- */
 @-webkit-keyframes hi {
     from {
         transform: translateY(50%) scale(0, 0);

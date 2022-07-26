@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próxima Parada</title>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-form-login.css">
+
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="login-html">
+
+            <input type="radio" name="option" id="signin" checked="checked" />
+            <input type="radio" name="option" id="register" />
+            <div class="inner-options">
+                <label class="option" for="signin">Entrar</label>
+                <label class="option" for="register">Cadastre-se</label>
+            </div>
+
+            <div class="login-form">
+
+                <div class="page">
+                    <div class="fields">
+                        <div class="group">
+                            <input id="email-signin" type="text" class="input" required />
+                            <label for="email-signin" class="label">E-mail</label>
+                        </div>
+                        <div class="group">
+                            <input id="pass-signin" type="password" class="input" required />
+                            <label for="pass-signin" class="label">Senha</label>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <button id="btn-signin"  type="submit" class="btn btn-primary">
+                            Entrar</button>
+                            <!--  onclick="javascript:location.href='home.html'" -->
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="fields">
+                        <div class="group">
+                            <input id="name-signup" type="text" class="input" required />
+                            <label for="name-signup" class="label">Nome completo</label>
+                        </div>
+                        <div class="group">
+                            <input id="occupation-signup" type="text" class="input" required />
+                            <label for="occupation-signup" class="label">Ocupação no IFPI</label>
+                        </div>
+                        <div class="group">
+                            <input id="phone-signup" type="phone" class="input" maxlength="16" required />
+                            <label for="phone-signup" class="label">Número de Whatsapp</label>
+                        </div>
+                        <div class="group">
+                            <input id="email-signup" type="email" class="input" maxlength="16" required />
+                            <label for="email-signup" class="label">E-mail</label>
+                        </div>
+                        <div class="group">
+                            <input id="pass-signup" type="password" class="input" required />
+                            <label for="pass-signup" class="label">Senha</label>
+                        </div>
+                        <div class="group">
+                            <input id="pass-confir-signup" type="password" class="input" required />
+                            <label for="pass-confir-signup" class="label">Comfirmar senha</label>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button id="btn-signup" type="submit" class="btn btn-primary" >
+                            Cadastre-se</button>
+                            <!-- onclick="javascript:location.href='home.html'" -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="bootstrap/js/bootstrap.js"></script>
+
+<script type="module" src="js/firebase-config.js"></script>
+<script type="module" src="js/firebase-access-methods.js"></script>
+
+</html>
