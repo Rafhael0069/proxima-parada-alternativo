@@ -11,11 +11,27 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/style-menu.css">
-    <link rel="stylesheet" type="text/css" href="css/style-form-perfil.css">
+    <link rel="stylesheet" type="text/css" href="css/style-form-profile.css">
 
 </head>
 
 <body>
+
+    <div class="modal" id="modal-loading-login" data-bs-backdrop="static" data-bs-keyboard="false"
+        aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="loading" class="spinner-border loading-4 text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
     <nav class="navbar fixed-top navbar-dark bg-primary shadow">
         <div class="container-fluid">
@@ -27,11 +43,11 @@
 
             <div class="btn-group user-image">
                 <img class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown"
-                    aria-expanded="false" src="img/use-perfil.jpg">
+                    aria-expanded="false" src="img/user-profile.jpg">
 
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li><button class="dropdown-item" type="button"
-                            onclick="javascript:location.href='perfil.html'">Perfli</button></li>
+                            onclick="javascript:location.href='profile.html'">Perfli</button></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
@@ -41,10 +57,10 @@
             </div>
         </div>
     </nav>
-    <div class="modal fade come-from-modal left" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="modal-menu modal fade come-from-modal left" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
+            <div class="modal-content modal-menu-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Menu</h5>
                     <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal"
@@ -65,29 +81,29 @@
     </div>
 
     <main class="container">
-        <div class="perfil-html">
+        <div class="profile-html">
 
-            <div class="view-image-perfil">
-                <img id="image_perfil" src="img/use-perfil.jpg">
-                <span id="mudar_imagem">Mudar imagen</span>
+            <div class="view-image-profile">
+                <img id="image-profile" src="">
+                <span id="change-image">Mudar imagen</span>
             </div>
             <div class="fields">
                 <div class="group">
-                    <input id="nome" type="text" class="input" required />
-                    <label for="nome" class="label">Nome completo</label>
+                    <input id="name-profile" type="text" class="input" required />
+                    <label for="name-profile" class="label">Nome completo</label>
                 </div>
                 <div class="group">
-                    <input id="ocupacao" type="text" class="input" required />
-                    <label for="ocupacao" class="label">Ocupação no IFPI</label>
+                    <input id="occupation-profile" type="text" class="input" required />
+                    <label for="occupation-profile" class="label">Ocupação no IFPI</label>
                 </div>
                 <div class="group">
-                    <input id="telefone" type="phone" class="input" maxlength="16" required />
-                    <label for="telefone" class="label">Número de Whatsapp</label>
+                    <input id="phone-profile" type="phone" class="input" maxlength="16" required />
+                    <label for="phone-profile" class="label">Número de Whatsapp</label>
                 </div>
 
                 <div class="group">
-                    <input id="email" type="phone" class="input" maxlength="16" required />
-                    <label for="email" class="label">E-mail</label>
+                    <input id="email-profile" type="phone" class="input" maxlength="16" required />
+                    <label for="email-profile" class="label">E-mail</label>
                 </div>
             </div>
             <div class="buttons">
@@ -99,5 +115,7 @@
 </body>
 
 <script src="bootstrap/js/bootstrap.js"></script>
+<script type="module" src="js/firebase-config.js"></script>
+<script type="module" src="js/firebase-database-methods.js"></script>
 
 </html>

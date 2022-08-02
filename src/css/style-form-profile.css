@@ -11,12 +11,16 @@
     align-items: center;
 }
 
-.perfil-html {
+.profile-html {
+    border-radius: 10px;
+    min-width: 100%;
+    padding: 20px 15px;
+    padding-top: 0px;
     width: 100%;
     background: var(--color-blue-dark-30);
 }
 
-.perfil-html .view-image-perfil {
+.profile-html .view-image-profile {
     margin: 20px 0;
     margin-bottom: 15px;
 
@@ -26,14 +30,14 @@
     align-items: center;
 }
 
-.perfil-html .view-image-perfil img {
+.profile-html .view-image-profile img {
     border-radius: 50%;
     object-fit: cover;
     width: 150px;
     height: 150px;
 }
 
-.perfil-html .view-image-perfil span {
+.profile-html .view-image-profile span {
     font-style: italic;
     font-size: 1.0em;
     margin-top: 10px;
@@ -43,12 +47,12 @@
     border-radius: 10px;
 }
 
-.perfil-html .view-image-perfil span:hover {
+.profile-html .view-image-profile span:hover {
     font-weight: bold;
 }
 
 
-.perfil-html .fields {
+.profile-html .fields {
 
     width: 100%;
     margin-top: 10px;
@@ -57,7 +61,7 @@
     justify-content: center;
 }
 
-.perfil-html .buttons {
+.profile-html .buttons {
 
     width: 100%;
     height: 18vh;
@@ -68,12 +72,12 @@
     justify-content: space-around;
 }
 
-.perfil-html .group .label,
-.perfil-html .group .button {
+.profile-html .group .label,
+.profile-html .group .button {
     text-transform: uppercase;
 }
 
-.perfil-html .group {
+.profile-html .group {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -81,14 +85,14 @@
     margin-bottom: 5px;
 }
 
-.perfil-html .group .label,
-.perfil-html .group .input {
+.profile-html .group .label,
+.profile-html .group .input {
     width: 100%;
     display: block;
     color: var(--color-white);
 }
 
-.perfil-html .group .input {
+.profile-html .group .input {
     border: none;
     padding: 15px 20px;
     border-radius: 5px;
@@ -100,7 +104,7 @@
 }
 
 
-.perfil-html .group .label {
+.profile-html .group .label {
     font-size: 1.2em;
     position: absolute;
     top: 1.8rem;
@@ -118,9 +122,3 @@
 /* .input:valid+.label {
     color: var(--bs-success);
 } */
-
-.perfil-html{
-    min-width: 100%;
-    padding: 20px 15px;
-    padding-top: 0px;
-}

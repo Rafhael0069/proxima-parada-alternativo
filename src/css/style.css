@@ -62,17 +62,34 @@ body {
 	border: none;
 }
 
+.display-off {
+	display: none;
+}
+
+.loading-4{
+	width: 4rem;
+	height: 4rem;
+
+	border: 0.4em solid currentColor;
+	border-right-color: transparent
+}
+
+.modal-content {
+	background-color: transparent;
+	border: none;
+}
+
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
 }
 
 .rodape {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	padding: 5px 5%;
 }
 

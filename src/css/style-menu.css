@@ -21,9 +21,15 @@ img {
     width: 40px;
     height: 40px;
     cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .user-image img {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -48,12 +54,12 @@ img {
     margin: 0;
 }
 
-.modal {
+.modal-menu {
     width: 80%;
     max-width: 300px;
 }
 
-.modal-content {
+.modal-menu-content {
     width: 80%;
     max-width: 300px;
     background: var(--bs-primary);

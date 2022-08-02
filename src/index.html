@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Próxima Parada</title>
 
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
@@ -12,13 +13,25 @@
     <link rel="stylesheet" href="css/style-form-login.css">
 
 
-
-
 </head>
 
 <body>
+    <div class="modal" id="modal-loading-login" data-bs-backdrop="static" data-bs-keyboard="false"
+        aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="loading" class="spinner-border loading-4 text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div class="container">
+    <div id="content" class="container">
         <div class="login-html">
 
             <input type="radio" name="option" id="signin" checked="checked" />
@@ -43,9 +56,8 @@
                     </div>
 
                     <div class="buttons">
-                        <button id="btn-signin"  type="submit" class="btn btn-primary">
-                            Entrar</button>
-                            <!--  onclick="javascript:location.href='home.html'" -->
+                        <button id="btn-signin" type="submit" class="btn btn-primary">Entrar</button>
+                        <!--  onclick="javascript:location.href='home.html'" -->
                     </div>
                 </div>
 
@@ -64,7 +76,7 @@
                             <label for="phone-signup" class="label">Número de Whatsapp</label>
                         </div>
                         <div class="group">
-                            <input id="email-signup" type="email" class="input" maxlength="16" required />
+                            <input id="email-signup" type="email" class="input" required />
                             <label for="email-signup" class="label">E-mail</label>
                         </div>
                         <div class="group">
@@ -77,9 +89,8 @@
                         </div>
                     </div>
                     <div class="buttons">
-                        <button id="btn-signup" type="submit" class="btn btn-primary" >
-                            Cadastre-se</button>
-                            <!-- onclick="javascript:location.href='home.html'" -->
+                        <button id="btn-signup" type="submit" class="btn btn-primary">Cadastre-se</button>
+                        <!-- onclick="javascript:location.href='home.html'" -->
                     </div>
                 </div>
             </div>
@@ -89,6 +100,7 @@
 </body>
 
 <script src="bootstrap/js/bootstrap.js"></script>
+<!-- <script src="bootstrap/js/jquery.min.js"></script> -->
 
 <script type="module" src="js/firebase-config.js"></script>
 <script type="module" src="js/firebase-access-methods.js"></script>
