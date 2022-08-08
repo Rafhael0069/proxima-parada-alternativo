@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema de compartlhamento de caronas">
+  <title>Próxima Parada</title>
+
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style-menu.css">
+  <link rel="stylesheet" type="text/css" href="css/style-form-carona.css">
+
+</head>
+
+<body>
+
+
+
+  <div class="modal" id="modal-loading-login" data-bs-backdrop="static" data-bs-keyboard="false"
+        aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="loading" class="spinner-border loading-4 text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+  <nav class="navbar fixed-top navbar-dark bg-primary shadow">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <span class="navbar-brand mb-0 h1">Proxíma Parada</span>
+
+      <div class="btn-group user-image">
+        <img class="img-user nav-link dropdown-toggle display-off" href="#" id="navbarDropdown"
+          data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="loading-image-user spinner-border " role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><button class="dropdown-item" type="button"
+              onclick="javascript:location.href='profile.html'">Perfli</button></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><button id="btn-logout" class="dropdown-item" type="button">Sair</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal-menu modal fade come-from-modal left" id="exampleModal" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content modal-menu-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Menu</h5>
+          <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="btn-group-vertical" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn btn-primary" onclick="javascript:location.href='home.html'">Inicio</button>
+            <button type="button" class="btn btn-primary"
+              onclick="javascript:location.href='profile.html'">Perfil</button>
+            <button type="button" class="btn btn-primary active">Caronas</button>
+            <button type="button" class="btn btn-primary">Filtros</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <div class="carona-html">
+      <div class="fields">
+        <h3>Origem</h3>
+        <!--  <div class="group">
+          <input id="email" type="text" class="input" required />
+          <label for="email" class="label">E-mail</label>
+        </div> -->
+        <div class="group">
+          <input id="neighborhood-origin" type="text" class="input" required />
+          <label for="neighborhood-origin" class="label">Bairro:</label><br>
+        </div>
+        <div class="group group-flex">
+          <div class="group rua">
+            <input id="street-origin" type="text" class="input" required />
+            <label for="street-origin" class="label">Rua:</label><br>
+          </div>
+          <div class="group num">
+            <input id="number-origin" type="text" class="input" required />
+            <label for="number-origin" class="label">Nº:</label>
+          </div>
+        </div>
+        <div class="group group-flex">
+          <div class="group field-1">
+            <input id="date-origin" type="date" class="input" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
+            <label for="date-origin" class="label">Data:</label>
+          </div>
+          <div class="group field-1">
+            <input id="time-origin" type="time" class="input" required />
+            <label for="time-origin" class="label">Hora:</label>
+          </div>
+        </div>
+
+      </div>
+      <div class="fields">
+        <h3>Destino</h3>
+        <div class="group">
+          <input id="neighborhood-destination" type="text" class="input" required />
+          <label for="neighborhood-destination" class="label">Bairro:</label>
+        </div>
+        <div class="group group-flex">
+          <div class="group rua">
+            <input id="street-destination" type="text" class="input" required />
+            <label for="street-destination" class="label">Rua:</label>
+          </div>
+          <div class="group num">
+            <input id="number-destination" type="text" class="input" required />
+            <label for="number-destination" class="label">Nº:</label>
+          </div>
+        </div>
+      </div>
+      <fieldset id="vehicle" class="fields">
+        <h3>Veículo</h3>
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="vehicle" value="Carro" id="radio-car" checked />
+          <label class="btn btn-outline-primary" for="radio-car">Carro</label>
+
+          <input type="radio" class="btn-check" name="vehicle" value="Moto" id="radio-motorcycle" />
+          <label class="btn btn-outline-primary" for="radio-motorcycle">Moto</label>
+        </div>
+      </fieldset>
+      <fieldset id="regularity" class="fields">
+        <h3>Regularidade</h3>
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="regularity" value="false" id="non-regular-radio" checked />
+          <label class="btn btn-outline-primary" for="non-regular-radio">Não regular</label>
+
+          <input type="radio" class="btn-check" name="regularity" value="true" id="regular-radio" />
+          <label class="btn btn-outline-primary" for="regular-radio">Regular</label>
+        </div>
+      </fieldset>
+      <fieldset class="fields">
+        <h3>Dias da Semana</h3>
+        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+          <input type="checkbox" class="btn-check" name="day" value="dom" id="dom" autocomplete="off">
+          <label class="btn btn-outline-primary dia" for="dom">Dom</label>
+
+          <input type="checkbox" class="btn-check" name="day" value="seg" id="seg" autocomplete="off">
+          <label class="btn btn-outline-primary dia" for="seg">Seg</label>
+
+          <input type="checkbox" class="btn-check" name="day" value="ter" id="ter" autocomplete="off">
+          <label class="btn btn-outline-primary dia" for="ter">Ter</label>
+
+          <input type="checkbox" class="btn-check" name="day" value="qua" id="qua" autocomplete="off">
+          <label class="btn btn-outline-primary dia" for="qua">Qua</label>
+
+          <input type="checkbox" class="btn-check" name="day" value="qui" id="qui" autocomplete="off">
+          <label class="btn btn-outline-primary dia" for="qui">Qui</label>
+
+          <input type="checkbox" class="btn-check" name="day" value="sex" id="sex" autocomplete="off">
+          <label class="btn btn-outline-primary dia" for="sex">Sex</label>
+ 
+          <input type="checkbox" class="btn-check" name="day" value="sab" id="sab" autocomplete="off">
+          <label class="btn btn-outline-primary dia" for="sab">Sab</label>
+        </div>
+
+      </fieldset>
+
+      <div class="buttons">
+        <button id="btn-register-ride" type="submit" class="btn btn-primary">Cadastrar
+          carona</button>
+        <button class="btn btn-outline-primary" onclick="javascript:location.href='rides.html'">Cancelar</button>
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+
+<script src="bootstrap/js/bootstrap.js"></script>
+<script type="module" src="js/firebase-config.js"></script>
+<script type="module" src="js/menu-methods.js"></script>
+<script type="module" src="js/firebase-crud-ride.js"></script>
+
+</html>

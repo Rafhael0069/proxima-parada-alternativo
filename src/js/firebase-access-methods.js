@@ -7,6 +7,8 @@ import {
 import {
   getFirestore,
   addDoc,
+  setDoc,
+  doc,
   collection,
 } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js";
 
@@ -22,10 +24,14 @@ onAuthStateChanged(auth, (user) => {
   modalLoading.show();
   if (user != null) {
     console.log("logged in!");
-    location.href = "home.html";
+    //location.href = "home.html";
+    modalLoading.hide();
   } else {
     console.log("No user!");
     modalLoading.hide();
+
+    document.getElementById("email-signin").value = "rafhael@gmail.com";
+    document.getElementById("pass-signin").value = "123456";
   }
 });
 
@@ -43,7 +49,7 @@ document.getElementById("btn-signin").addEventListener("click", () => {
       // ...
     })
     .catch((error) => {
-      console.log("Fail: " + errorMessage);
+      console.log("Fail: " + error.message);
       modalLoading.hide();
       if (error.code === "auth/invalid-email") {
         alert("Formato de email inválido.");
@@ -77,8 +83,8 @@ function createUser(name, occupation, phone, email, password) {
     .then((userCredential) => {
       const user = userCredential.user;
 
-      writeUserData(name, occupation, phone, email);
-      console.log("Sucess!");
+      writeUserData(name, occupation, phone, email, user);
+      console.log("Sucess!"+user.uid);
     })
     .catch((error) => {
       modalLoading.hide();
@@ -95,16 +101,18 @@ function createUser(name, occupation, phone, email, password) {
     });
 }
 
-async function writeUserData(name, occupation, phone, email) {
+async function writeUserData(name, occupation, phone, email, user) {
   try {
-    const docRef = await addDoc(collection(db, "users"), {
+    await setDoc(doc(db, "users/"+user.uid), {
+      email: email,
+      image_address:
+        "https://firebasestorage.googleapis.com/v0/b/proximaparadaalternativo.appspot.com/o/imageUsers%2Favatar.jpg?alt=media&token=c8121aa1-d4d3-4db8-bb73-56ca627f83eb",
       name: name,
-      image_address: "https://firebasestorage.googleapis.com/v0/b/proximaparadaalternativo.appspot.com/o/imageUsers%2Favatar.jpg?alt=media&token=c8121aa1-d4d3-4db8-bb73-56ca627f83eb",
       occupation: occupation,
       phone: phone,
-      email: email,
+      user_uid: user.uid,
     });
-    console.log("Documento escrito com ID: ", docRef.id);
+    //console.log("teste!"+user.uid);
     modalLoading.hide();
     location.href = "home.html";
   } catch (e) {

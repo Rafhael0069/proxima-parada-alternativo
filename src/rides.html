@@ -11,14 +11,15 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/style-menu.css">
-    <link rel="stylesheet" type="text/css" href="css/style-form-profile.css">
+    <link rel="stylesheet" type="text/css" href="css/style-card-view.css">
 
 </head>
 
 <body>
 
-    <div class="modal" id="modal-loading-login" data-bs-backdrop="static" data-bs-keyboard="false"
-        aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+
+    <div class="modal" id="modal-loading-login" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -31,7 +32,6 @@
             </div>
         </div>
     </div>
-    
 
     <nav class="navbar fixed-top navbar-dark bg-primary shadow">
         <div class="container-fluid">
@@ -42,14 +42,15 @@
             <span class="navbar-brand mb-0 h1">Proxíma Parada</span>
 
             <div class="btn-group user-image">
-                <img class="img-user nav-link dropdown-toggle display-off" href="#" id="navbarDropdown" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                <img class="img-user nav-link dropdown-toggle display-off" href="#" id="navbarDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="loading-image-user spinner-border " role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>
 
                 <ul class="dropdown-menu dropdown-menu-end">
-                    <li><button class="dropdown-item active" type="button">Perfli</button></li>
+                    <li><button class="dropdown-item" type="button"
+                            onclick="javascript:location.href='profile.html'">Perfli</button></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
@@ -58,8 +59,9 @@
             </div>
         </div>
     </nav>
-    <div class="modal-menu modal fade come-from-modal left" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+
+    <div class="modal-menu modal fade come-from-modal left" id="exampleModal" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content modal-menu-content">
                 <div class="modal-header">
@@ -71,9 +73,9 @@
                     <div class="btn-group-vertical" role="group" aria-label="Button group with nested dropdown">
                         <button type="button" class="btn btn-primary"
                             onclick="javascript:location.href='home.html'">Inicio</button>
-                        <button type="button" class="btn btn-primary active">Perfil</button>
                         <button type="button" class="btn btn-primary"
-                            onclick="javascript:location.href='rides.html'">Caronas</button>
+                            onclick="javascript:location.href='profile.html'">Perfil</button>
+                        <button type="button" class="btn btn-primary active">Caronas</button>
                         <button type="button" class="btn btn-primary">Filtros</button>
                     </div>
                 </div>
@@ -81,43 +83,49 @@
         </div>
     </div>
 
-    <main class="container">
-        <div class="profile-html">
 
-            <div class="view-image-profile">
-                <img id="image-profile" src="">
-                <span id="change-image">Mudar imagen</span>
-            </div>
-            <div class="fields">
-                <div class="group">
-                    <input id="name-profile" type="text" class="input" required />
-                    <label for="name-profile" class="label">Nome completo</label>
-                </div>
-                <div class="group">
-                    <input id="occupation-profile" type="text" class="input" required />
-                    <label for="occupation-profile" class="label">Ocupação no IFPI</label>
-                </div>
-                <div class="group">
-                    <input id="phone-profile" type="phone" class="input" maxlength="16" required />
-                    <label for="phone-profile" class="label">Número de Whatsapp</label>
-                </div>
+    <main id="display-cardviews-rides" class="container rides-container">
 
-                <div class="group">
-                    <input id="email-profile" type="phone" class="input" maxlength="16" required />
-                    <label for="email-profile" class="label">E-mail</label>
+        <!-- <div class="card">
+            <div class="card-header">
+                <p><span>Silva Rogerio</span> - <span>Professor</span></p>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <h3>Origen</h3>
+                    <p>Bairro: <span>Centro</span></p>
+                    <p>Rua: <span>Rua jubelino fonsseca</span> n°: <span>21</span></p>
+                    <p><span>21/07/2022</span> - <span>07:00</span></p>
+                </div>
+                <div class="card-text">
+                    <h3>Destino</h3>
+                    <p>Bairro: <span>Pantanal</span></p>
+                    <p>Rua: <span>Carlos Batista</span> n°: <span>234</span></p>
+                </div>
+                <div class="card-text">
+                    <p>Veículo: <span>Carro</span></p>
                 </div>
             </div>
-            <div class="buttons">
-                <button id="btn-save-editions" type="submit" class="btn btn-primary">Salvar Alterações</button>
-                <button class="btn btn-primary" onclick="javascript:location.href='home.html'">Cancelar</button>
+            <div class="card-body card-buttons">
+                <span class="available">Editar carona</span>
+                <button class="card-button btn btn-outline-danger">Encerrar carona</button>
             </div>
-        </div>
+        </div> -->
+
     </main>
+
+    <footer>
+        <div class="rodape">
+            <button id="btnNovaCarona" class="btn btn-primary"
+                onclick="javascript:location.href='crud_rides.html'">Cadastrar nova carona</button>
+        </div>
+    </footer>
+
 </body>
 
 <script src="bootstrap/js/bootstrap.js"></script>
 <script type="module" src="js/firebase-config.js"></script>
 <script type="module" src="js/menu-methods.js"></script>
-<script type="module" src="js/firebase-user-methods.js"></script>
+<script type="module" src="js/firebase-rides.js"></script>
 
 </html>

@@ -17,6 +17,21 @@
 
 <body>
 
+    <div class="modal" id="modal-loading-login" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="loading" class="spinner-border loading-4 text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar fixed-top navbar-dark bg-primary shadow">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -26,9 +41,9 @@
             <span class="navbar-brand mb-0 h1">Proxíma Parada</span>
 
             <div class="btn-group user-image">
-                <img class="img-user nav-link dropdown-toggle display-off" href="#" id="navbarDropdown" data-bs-toggle="dropdown"
-                    aria-expanded="false" src="img/user-profile.jpg">
-                <div class="loading-image-user spinner-border" role="status">
+                <img class="img-user nav-link dropdown-toggle display-off" href="#" id="navbarDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="loading-image-user spinner-border " role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>
 
@@ -44,8 +59,8 @@
         </div>
     </nav>
 
-    <div class="modal-menu modal fade come-from-modal left" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal-menu modal fade come-from-modal left" id="exampleModal" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content modal-menu-content">
                 <div class="modal-header">
@@ -59,7 +74,7 @@
                         <button type="button" class="btn btn-primary"
                             onclick="javascript:location.href='profile.html'">Perfil</button>
                         <button type="button" class="btn btn-primary"
-                            onclick="javascript:location.href='caronas.html'">Caronas</button>
+                            onclick="javascript:location.href='rides.html'">Caronas</button>
                         <button type="button" class="btn btn-primary">Filtros</button>
                     </div>
                 </div>
@@ -67,9 +82,12 @@
         </div>
     </div>
 
-    <main class="container">
+    <main id="display-cardviews-rides-home" class="container">
 
-        <div class="card">
+
+
+
+        <!-- <div class="card">
             <div class="card-header">
                 <p><span>Silva Rogerio</span> - <span>Professor</span></p>
             </div>
@@ -92,58 +110,7 @@
             <div class="card-body">
                 <button class="card-button btn-primary">Conversar com o proprietário</button>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                <p><span>Silva Rogerio</span> - <span>Professor</span></p>
-            </div>
-            <div class="card-body">
-                <div class="card-text">
-                    <h3>Origen</h3>
-                    <p>Bairro: <span>Centro</span></p>
-                    <p>Rua: <span>Rua jubelino fonsseca</span> n°: <span>21</span></p>
-                    <p><span>21/07/2022</span> - <span>07:00</span></p>
-                </div>
-                <div class="card-text">
-                    <h3>Destino</h3>
-                    <p>Bairro: <span>Pantanal</span></p>
-                    <p>Rua: <span>Carlos Batista</span> n°: <span>234</span></p>
-                </div>
-                <div class="card-text">
-                    <p>Veículo: <span>Carro</span></p>
-                </div>
-            </div>
-            <div class="card-body">
-                <button class="card-button btn-primary">Conversar com o proprietário</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                <p><span>Silva Rogerio</span> - <span>Professor</span></p>
-            </div>
-            <div class="card-body">
-                <div class="card-text">
-                    <h3>Origen</h3>
-                    <p>Bairro: <span>Centro</span></p>
-                    <p>Rua: <span>Rua jubelino fonsseca</span> n°: <span>21</span></p>
-                    <p><span>21/07/2022</span> - <span>07:00</span></p>
-                </div>
-                <div class="card-text">
-                    <h3>Destino</h3>
-                    <p>Bairro: <span>Pantanal</span></p>
-                    <p>Rua: <span>Carlos Batista</span> n°: <span>234</span></p>
-                </div>
-                <div class="card-text">
-                    <p>Veículo: <span>Carro</span></p>
-                </div>
-            </div>
-            <div class="card-body">
-                <button class="card-button btn-primary">Conversar com o proprietário</button>
-            </div>
-        </div>
-
+        </div> -->
 
     </main>
 
@@ -153,5 +120,6 @@
 
 <script type="module" src="js/firebase-config.js"></script>
 <script type="module" src="js/menu-methods.js"></script>
+<script type="module" src="js/firebase-rides-home.js"></script>
 
 </html>
