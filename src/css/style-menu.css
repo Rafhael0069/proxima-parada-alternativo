@@ -63,6 +63,7 @@ img {
     width: 80%;
     max-width: 300px;
     background: var(--bs-primary);
+    color: #fff;
 }
 
 .btn-group-vertical {

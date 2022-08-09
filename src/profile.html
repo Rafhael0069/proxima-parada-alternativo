@@ -17,11 +17,11 @@
 
 <body>
 
-    <div class="modal" id="modal-loading-login" data-bs-backdrop="static" data-bs-keyboard="false"
-        aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal" id="modal-loading-login" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true"
+        tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content modal-content-loading">
                     <div class="modal-body">
                         <div id="loading" class="spinner-border loading-4 text-primary" role="status">
                             <span class="visually-hidden">Loading...</span>
@@ -31,19 +31,19 @@
             </div>
         </div>
     </div>
-    
+
 
     <nav class="navbar fixed-top navbar-dark bg-primary shadow">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#menuModal">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <span class="navbar-brand mb-0 h1">Proxíma Parada</span>
 
             <div class="btn-group user-image">
-                <img class="img-user nav-link dropdown-toggle display-off" href="#" id="navbarDropdown" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                <img class="img-user nav-link dropdown-toggle display-off" href="#" id="navbarDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="loading-image-user spinner-border " role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>
@@ -58,12 +58,13 @@
             </div>
         </div>
     </nav>
-    <div class="modal-menu modal fade come-from-modal left" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+
+    <div class="modal-menu modal fade come-from-modal left" id="menuModal" tabindex="-1"
+        aria-labelledby="menuModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content modal-menu-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Menu</h5>
+                    <h5 class="modal-title" id="menuModalLabel">Menu</h5>
                     <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
@@ -103,13 +104,13 @@
                 </div>
 
                 <div class="group">
-                    <input id="email-profile" type="phone" class="input" maxlength="16" required />
-                    <label for="email-profile" class="label">E-mail</label>
+                    <p id="email-profile" class="input" maxlength="16" required ></p>
+                    <!-- <label for="email-profile" class="label">E-mail</label> -->
                 </div>
             </div>
             <div class="buttons">
                 <button id="btn-save-editions" type="submit" class="btn btn-primary">Salvar Alterações</button>
-                <button class="btn btn-primary" onclick="javascript:location.href='home.html'">Cancelar</button>
+                <button class="btn btn-outline-danger" onclick="javascript:location.href='home.html'">Cancelar</button>
             </div>
         </div>
     </main>

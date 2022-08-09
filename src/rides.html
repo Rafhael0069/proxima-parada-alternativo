@@ -13,16 +13,17 @@
     <link rel="stylesheet" type="text/css" href="css/style-menu.css">
     <link rel="stylesheet" type="text/css" href="css/style-card-view.css">
 
+
 </head>
 
 <body>
 
 
     <div class="modal" id="modal-loading-login" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true"
-        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content modal-content-loading">
                     <div class="modal-body">
                         <div id="loading" class="spinner-border loading-4 text-primary" role="status">
                             <span class="visually-hidden">Loading...</span>
@@ -35,7 +36,7 @@
 
     <nav class="navbar fixed-top navbar-dark bg-primary shadow">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#menuModal">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -60,12 +61,12 @@
         </div>
     </nav>
 
-    <div class="modal-menu modal fade come-from-modal left" id="exampleModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-menu modal fade come-from-modal left" id="menuModal" tabindex="-1"
+        aria-labelledby="menuModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content modal-menu-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Menu</h5>
+                    <h5 class="modal-title" id="menuModalLabel">Menu</h5>
                     <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
@@ -83,6 +84,25 @@
         </div>
     </div>
 
+    <div class="modal fade" id="staticBackdrop" data-id="testes id" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Confirmação de Enceramento de carona</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modal-body" class="modal-body">
+                    <span id="modal_body"> </span>
+                    Você tem certeza que deseja encerrar esta carona?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button id="btn-disable-ride" type="button" class="btn btn-danger">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main id="display-cardviews-rides" class="container rides-container">
 
@@ -111,6 +131,8 @@
                 <button class="card-button btn btn-outline-danger">Encerrar carona</button>
             </div>
         </div> -->
+
+
 
     </main>
 

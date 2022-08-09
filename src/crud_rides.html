@@ -19,26 +19,26 @@
 
 
 
-  <div class="modal" id="modal-loading-login" data-bs-backdrop="static" data-bs-keyboard="false"
-        aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div id="loading" class="spinner-border loading-4 text-primary" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                    </div>
-                </div>
+  <div class="modal" id="modal-loading-login" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-content-loading">
+          <div class="modal-body">
+            <div id="loading" class="spinner-border loading-4 text-primary" role="status">
+              <span class="visually-hidden">Loading...</span>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
 
 
   <nav class="navbar fixed-top navbar-dark bg-primary shadow">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#menuModal">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -63,12 +63,12 @@
     </div>
   </nav>
 
-  <div class="modal-menu modal fade come-from-modal left" id="exampleModal" tabindex="-1"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-menu modal fade come-from-modal left" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content modal-menu-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Menu</h5>
+          <h5 class="modal-title" id="menuModalLabel">Menu</h5>
           <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -98,7 +98,7 @@
           <label for="neighborhood-origin" class="label">Bairro:</label><br>
         </div>
         <div class="group group-flex">
-          <div class="group rua">
+          <div class="group str">
             <input id="street-origin" type="text" class="input" required />
             <label for="street-origin" class="label">Rua:</label><br>
           </div>
@@ -110,11 +110,11 @@
         <div class="group group-flex">
           <div class="group field-1">
             <input id="date-origin" type="date" class="input" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
-            <label for="date-origin" class="label">Data:</label>
+            <label for="date-origin" class="label label-fixed">Data:</label>
           </div>
           <div class="group field-1">
             <input id="time-origin" type="time" class="input" required />
-            <label for="time-origin" class="label">Hora:</label>
+            <label for="time-origin" class="label label-fixed ">Hora:</label>
           </div>
         </div>
 
@@ -126,7 +126,7 @@
           <label for="neighborhood-destination" class="label">Bairro:</label>
         </div>
         <div class="group group-flex">
-          <div class="group rua">
+          <div class="group str">
             <input id="street-destination" type="text" class="input" required />
             <label for="street-destination" class="label">Rua:</label>
           </div>
@@ -176,7 +176,7 @@
 
           <input type="checkbox" class="btn-check" name="day" value="sex" id="sex" autocomplete="off">
           <label class="btn btn-outline-primary dia" for="sex">Sex</label>
- 
+
           <input type="checkbox" class="btn-check" name="day" value="sab" id="sab" autocomplete="off">
           <label class="btn btn-outline-primary dia" for="sab">Sab</label>
         </div>
@@ -186,7 +186,7 @@
       <div class="buttons">
         <button id="btn-register-ride" type="submit" class="btn btn-primary">Cadastrar
           carona</button>
-        <button class="btn btn-outline-primary" onclick="javascript:location.href='rides.html'">Cancelar</button>
+        <button class="btn btn-outline-danger" onclick="javascript:location.href='rides.html'">Cancelar</button>
       </div>
 
     </div>

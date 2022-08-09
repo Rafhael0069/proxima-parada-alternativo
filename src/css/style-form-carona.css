@@ -61,12 +61,16 @@
     width: 49%;
 }
 
-.rua {
+.str {
     width: 83%;
 }
 
 .num {
     width: 15%;
+}
+
+.label-fixed {
+    transform: translateY(-2.0rem);
 }
 
 /* .fields .group .num .label{

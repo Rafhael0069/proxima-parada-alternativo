@@ -51,7 +51,9 @@ async function getRides(user_uid) {
 }
 
 function showRideData(rideData, rideId) {
-  let banckground_color, ride_state, disabled = "";
+  let banckground_color,
+    ride_state,
+    disabled = "";
   if (rideData.available == "true") {
     banckground_color = "available";
     ride_state = "Disponivel";
@@ -60,6 +62,9 @@ function showRideData(rideData, rideId) {
     ride_state = "Indisponivel";
     disabled = "disabled";
   }
+
+  //console.log(rideId);
+
   let ridesView = document.getElementById("display-cardviews-rides").innerHTML;
   ridesView =
     ridesView +
@@ -85,7 +90,8 @@ function showRideData(rideData, rideId) {
       </div>
       <div class="card-body card-buttons">
           <span class="${banckground_color}">Estatos da carona: ${ride_state}</span>
-          <button class="card-button btn btn-outline-danger" ${disabled}>Encerrar carona</button>
+          <button class="btn-cancel card-button btn btn-outline-danger" ${disabled} 
+          data-bs-toggle="modal" data-bs-target="#staticBackdrop">Encerrar carona</button>
       </div>
     </div>`;
 

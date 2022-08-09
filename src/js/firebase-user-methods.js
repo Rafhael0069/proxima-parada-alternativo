@@ -63,7 +63,7 @@ function displayingUserData(snapshot) {
   name.value = snapshot.name;
   occupation.value = snapshot.occupation;
   phone.value = snapshot.phone;
-  email.value = snapshot.email;
+  email.innerHTML = snapshot.email;
   modalLoading.hide();
 }
 

@@ -59,7 +59,6 @@ body {
 .btn {
 	width: 100%;
 	font-size: 1.3em;
-	border: none;
 }
 
 .display-off {
@@ -75,6 +74,10 @@ body {
 }
 
 .modal-content {
+	color: black;
+}
+
+.modal-content-loading{
 	background-color: transparent;
 	border: none;
 }
