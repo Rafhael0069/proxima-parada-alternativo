@@ -42,3 +42,7 @@ for (let field of fields) {
   });
   field.addEventListener("blur", customValidation);
 }
+
+function botaoAcionado(){
+  console.log("funcionou");
+}

@@ -49,35 +49,41 @@ async function getRides() {
   modalLoading.hide();
 }
 
-function showRideData(rideDaat, rideId) {
+function showRideData(rideData, rideId) {
   let ridesView = document.getElementById(
     "display-cardviews-rides-home"
   ).innerHTML;
   ridesView =
     ridesView +
     `<div class="card">
-        <div class="card-header">
-            <p><span>${rideDaat.user_name}</span> - <span>${rideDaat.user_occupation}</span></p>
+      <div class="card-header">
+        <div class="card-header-text">
+          <p>${rideData.user_name}</p>
+          <span>${rideData.user_occupation}</span>
         </div>
+        <div class="card-header-image">
+          <img id="card-image" src="${rideData.user_image_address}">
+        </div>
+      </div>
         <div class="card-body">
-            <div class="card-text">
-                <h3>Origen</h3>
-                <p>Bairro: <span>${rideDaat.neighborhood_origin}</span></p>
-                <p>Rua: <span>${rideDaat.street_origin}</span> n°: <span>${rideDaat.number_origin}</span></p>
-                <p><span>${rideDaat.date_origin}</span> - <span>${rideDaat.time_origin}</span></p>
-            </div>
-            <div class="card-text">
-                <h3>Destino</h3>
-                <p>Bairro: <span>${rideDaat.neighborhood_destination}</span></p>
-                <p>Rua: <span>${rideDaat.street_destination}</span> n°: <span>${rideDaat.number_destination}</span></p>
-            </div>
-            <div class="card-text">
-                <p>Veículo: <span>${rideDaat.vehicle}</span></p>
-            </div>
+          <div class="card-text">
+            <h3>Origen</h3>
+            <p>Bairro: <span>${rideData.neighborhood_origin}</span></p>
+            <p>Rua: <span>${rideData.street_origin}</span> n°: <span>${rideData.number_origin}</span></p>
+            <p><span>${rideData.date_origin}</span> - <span>${rideData.time_origin}</span></p>
+          </div>
+          <div class="card-text">
+            <h3>Destino</h3>
+            <p>Bairro: <span>${rideData.neighborhood_destination}</span></p>
+            <p>Rua: <span>${rideData.street_destination}</span> n°: <span>${rideData.number_destination}</span></p>
+          </div>
+          <div class="card-text">
+            <p>Veículo: <span>${rideData.vehicle}</span></p>
+          </div>
         </div>
-            <div class="card-body">
-                <button class="card-button btn-primary">Conversar com o proprietário</button>
-            </div>
+          <div class="card-body">
+            <button class="card-button btn-primary">Conversar com o proprietário</button>
+          </div>
       </div>`;
 
   document.getElementById("display-cardviews-rides-home").innerHTML = ridesView;

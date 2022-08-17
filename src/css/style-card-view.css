@@ -18,6 +18,7 @@ a {
 .card {
     width: 96%;
     max-width: 400px;
+    min-width: 350px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -39,10 +40,39 @@ a {
 .card-header {
     font-size: 26px;
     font-weight: bold;
+    width: 100%;
     padding: 10px 15px;
     color: var(--bs-primary);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
+    display: flex;
+    justify-content: space-between;
 }
+
+.card-header .card-header-text {
+    /* border: 1px solid red; */
+    width: 80%;
+}
+
+.card-header .card-header-text p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card-header .card-header-image {
+    /* border: 1px solid black; */
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header .card-header-image img {
+    object-fit: cover;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
 
 .card-text {
     padding: 10px 15px;

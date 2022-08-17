@@ -65,7 +65,7 @@ body {
 	display: none;
 }
 
-.loading-4{
+.loading-4 {
 	width: 4rem;
 	height: 4rem;
 
@@ -77,9 +77,13 @@ body {
 	color: black;
 }
 
-.modal-content-loading{
+.modal-content-loading {
 	background-color: transparent;
 	border: none;
+}
+
+.modal-dialog-centered {
+	justify-content: center;
 }
 
 footer {

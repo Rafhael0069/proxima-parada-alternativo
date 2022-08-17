@@ -90,7 +90,7 @@ function createUser(name, occupation, phone, email, password) {
       modalLoading.hide();
       if (error.code === "auth/invalid-email") {
         alert("Formato de email inválido.");
-      } else if (error.code === "auth/auth/email-already-in-use") {
+      } else if (error.code === "auth/email-already-in-use") {
         alert("Esse email já é utilizado por outro usuário.");
       } else if (error.code === "auth/weak-password") {
         alert("Senha muito fraca.");
@@ -134,10 +134,13 @@ function validatingFields(
       createUser(name, occupation, phone, email, password);
       //console.log("Sucesso");
     } else {
+      modalLoading.hide();
       alert("Senhas diferentes.");
     }
   } else {
+    modalLoading.hide();
     alert("Senhas muito curta.");
+    
   }
 }
 

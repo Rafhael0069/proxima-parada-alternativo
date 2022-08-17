@@ -91,9 +91,13 @@ function showRideData(rideData, rideId) {
       <div class="card-body card-buttons">
           <span class="${banckground_color}">Estatos da carona: ${ride_state}</span>
           <button class="btn-cancel card-button btn btn-outline-danger" ${disabled} 
-          data-bs-toggle="modal" data-bs-target="#staticBackdrop">Encerrar carona</button>
+          data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="idRide(${rideId})" >Encerrar carona</button>
       </div>
     </div>`;
 
   document.getElementById("display-cardviews-rides").innerHTML = ridesView;
+}
+
+export function idRide(idRide){
+  console.log("funcionou: "+ idRide);
 }
