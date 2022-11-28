@@ -2,4 +2,4 @@ Essa aplicação é uma recodificação do sistema [Próxia Parada](https://gith
 
 
 Site online
-[Próxima Parada](proximaparadaalternativo.web.app)
+[Próxima Parada](https://proximaparadaalternativo.web.app/)
